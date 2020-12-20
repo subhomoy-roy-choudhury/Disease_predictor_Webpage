@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def heart(request):
     """ 
-    18:39:18 09 Oct, 2019 by Arjun Adhikari
+    
     Reading the training data set. 
     """
     df = pd.read_csv('static/Heart_train.csv')
@@ -16,7 +16,6 @@ def heart(request):
     Y = data[:, -1:]
 
     """ 
-    18:39:18 09 Oct, 2019 by Arjun Adhikari
     Reading data from the user. 
     """
 
@@ -82,7 +81,7 @@ def heart(request):
 
 def diabetes(request):
     """ 
-    20:13:20 09 Oct, 2019 by Arjun Adhikari
+    
     Reading the training data set. 
     """
     dfx = pd.read_csv('static/Diabetes_XTrain.csv')
@@ -92,7 +91,7 @@ def diabetes(request):
     Y = Y.reshape((-1,))
 
     """ 
-    20:18:20 09 Oct, 2019 by Arjun Adhikari
+    
     Reading data from user. 
     """
     value = ''
@@ -142,7 +141,6 @@ def diabetes(request):
 
 def breast(request):
     """ 
-    20:56:20 09 Oct, 2019 by Arjun Adhikari
     Reading training data set. 
     """
     df = pd.read_csv('static/Breast_train.csv')
@@ -152,7 +150,6 @@ def breast(request):
     print(X.shape, Y.shape)
 
     """ 
-    20:57:20 09 Oct, 2019 by Arjun Adhikari
     Reading data from user. 
     """
     value = ''
@@ -165,7 +162,6 @@ def breast(request):
         smoothness = float(request.POST['smoothness'])
 
         """ 
-        21:02:21 09 Oct, 2019 by Arjun Adhikari
         Creating our training model. 
         """
         rf = RandomForestClassifier(
@@ -205,8 +201,7 @@ def home(request):
                   'home.html')
 
 
-""" 
-20:07:20 10 Oct, 2019 by Arjun Adhikari
+"""
 Handling 404 error pages. 
 """
 
